@@ -84,61 +84,49 @@ namespace assignments
 {
     class company
     {
-        public string name;
-        public string addr;
-        public long PhoneNum;
-        public long FaxNum;
-        public string website;
-        public string MangName;
-        public string MangSurame;
-        public long MangPhone;
-
+       public string[] det = new string[8];
         public void details()
         {
-            Console.WriteLine($" \n\t\t\t Hello! \n\n \t welcome to {name} the biggest technology company in the middle east\n\n" +
-                $"  if you want to enrole in {name} you can conatct us via : \n\n" +
-                $"  Number : {PhoneNum}\n" +
-                $"  Fax Number : {FaxNum}\n" +
-                $"  or visit our website : {website}\n" +
-                $"  And you can head to our headquarter in \" {addr} \"\n\n " +
-                $"\t\t\t\t\t\t The Manger / prof.eng.mr {MangName} {MangSurame} \n" +
-                $"\t\t\t\t\t\t {MangPhone}");
-
-
-           
+            Console.WriteLine($" \n\t\t\t Hello! \n\n \t welcome to {det[0]} the biggest technology company in the middle east\n\n" +
+                $"  if you want to enrole in {det[0]} you can conatct us via : \n\n" +
+                $"  Number : {det[2]}\n" +
+                $"  Fax Number : {det[3]}\n" +
+                $"  or visit our website : {det[4]}\n" +
+                $"  And you can head to our headquarter in \" {det[1]} \"\n\n " +
+                $"\t\t\t\t\t\t The Manger / prof.eng.mr {det[5]} {det[6]} \n" +
+                $"\t\t\t\t\t\t {det[7]}");
         }
-       
+
     }
 
     internal class Program
     {
-
-       
-      
-
-
         static void Main(string[] args)
         {
-           
-            company Company1 = new company();
-            Console.Write($" Company name : ");  Company1.name = read();
-            Console.Write($" Company address : "); Company1.addr = read();
-            Console.Write($" Company phone number : ");  Company1.PhoneNum = long.Parse (read());
-            Console.Write($" Company fax number : ");  Company1.FaxNum = long.Parse(read());
-            Console.Write($" Company website : "); Company1.website = read();
-            Console.Write($" manger first name : "); Company1.MangName = read();
-            Console.Write($" manger last name : "); Company1.MangSurame = read();
-            Console.Write($" manger phone number : "); Company1.MangPhone = long.Parse(read()) ;
-            Company1.details();
 
+             string[] info = { " Company name : ", " Company address : ", " Company phone number : ", " Company fax number : ", " Company website : ", " manger first name : "
+                    , " manger last name : "," manger phone number : " };
 
-      
+             company company = new company();
+
+             for (int i =0; i< info.Length; i++)
+             {
+                print(info[i]);
+
+                 company.det[i] = read();
+             }
+              company.details();
         }
+
         static string read()
         {
             return Console.ReadLine();
         }
-      
+        static void print(string a)
+        {
+             Console.Write(a);
+        }
+
     }
 }
 
