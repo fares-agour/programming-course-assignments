@@ -3,12 +3,12 @@
 ## TASK A
 
 Write a program that print the following pattern.
-
+```
    *******
     *****
      ***
       *
-      
+  ```    
 ### Code section & Output
 
 
