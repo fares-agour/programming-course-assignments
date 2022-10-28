@@ -84,10 +84,10 @@ namespace assignments
 {
     class company
     {
-       public string[] det = new string[8];
-        public void details()
-        {
-            Console.WriteLine($" \n\t\t\t Hello! \n\n \t welcome to {det[0]} the biggest technology company in the middle east\n\n" +
+      public string[] det = new string[8];
+       public void details()
+       {
+        Console.WriteLine($" \n\t\t\t Hello! \n\n \t welcome to {det[0]} the biggest technology company in the middle east\n\n" +
                 $"  if you want to enrole in {det[0]} you can conatct us via : \n\n" +
                 $"  Number : {det[2]}\n" +
                 $"  Fax Number : {det[3]}\n" +
@@ -104,7 +104,8 @@ namespace assignments
         static void Main(string[] args)
         {
 
-             string[] info = { " Company name : ", " Company address : ", " Company phone number : ", " Company fax number : ", " Company website : ", " manger first name : "
+             string[] info = { " Company name : ", " Company address : ", " Company phone number : ",
+             " Company fax number : ", " Company website : ", " manger first name : "
                     , " manger last name : "," manger phone number : " };
 
              company company = new company();
